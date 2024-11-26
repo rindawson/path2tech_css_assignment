@@ -1,0 +1,280 @@
+html, body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#main { /*All the Visible Content*/
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+/*Side Navigation Bar*/
+nav { 
+  display: flex;
+  flex-direction: column;
+  background-color: #292929;
+  height: 100%;
+  width: 15%;
+  overflow: hidden;
+  color: #f2f2f2;
+  overflow-y: visible;
+  overflow-x: hidden;
+}
+
+nav p { /* Welcome, Joryu! */
+  text-align: center;
+}
+
+.nav-tabs { /*Inbox, Tagged, Important....*/
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 25%;
+}
+
+.nav-tabs a { /*Inbox, Tagged, Important... DONT DETETE*/
+  float: left;
+  color: #f2f2f2;
+  text-decoration: none;
+  height: 25%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.nav-tabs span { /*Inbox, Tagged, Important... DONT DETETE*/
+  margin: 0 11px;
+}
+
+.nav-tabs a:hover {
+  background-color: #f2f2f2;
+  color: #292929;
+}
+
+img { /*Profile Picture*/
+  align-self: center;
+  width: 40px;
+  height: 40px;
+  display: block;
+  margin-top: 10%;
+}
+ 
+.compose { /*Compose Button*/
+  background-color: #ffb120;
+  border-radius: 0.5rem;
+  border: none;
+  margin-bottom: 10px;
+  color: #f2f2f2;
+  padding: 7%;
+  text-align: center;
+  font-size: 1rem;
+  width: 95%;
+  transition-duration: 0.4s;
+  transform: translate(3%);
+}
+
+.compose:hover { /*Compose Button Hover Function*/
+  background-color: #f2f2f2;
+  color: #292929;
+}
+
+/*Email Previewer: Middle Section*/
+.previewer { 
+  display: flex;
+  height: 100%;
+  width: 20%;
+  background-color: #c1c0c0;
+  /* overflow-y: scroll; */
+  overflow-x: hidden;
+  flex-direction: column;
+}
+
+input { /*Email Search Bar*/
+  display: flex;
+  border-radius: 8px;
+  border: none;
+  text-align: center;
+  width: 86%;
+  padding: 2%;
+  margin: 0 auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  display: block;
+  font-size: 1rem;
+} 
+
+.previewer span {
+  float: left;
+  height: 15%;
+  width: 100%;
+  font-size: 0.9rem;
+  margin-left: 2%;
+  color: black; 
+} 
+
+.previewer a {
+  text-decoration: none;
+}
+
+.email:hover {
+  background-color: #f2f2f2;
+  color: black;
+  border-radius: 6px;
+}
+
+.email { /*The Three Email Previews*/
+  border-radius: 8px;
+  border: none;
+  width: 92%;
+  padding: 2%;
+  margin: 0 auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  display: block;
+}
+
+.email-list a {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* Email Reader */
+.reader {
+  background-color: #f2f2f2;
+  overflow-y: scroll;
+  overflow-x: auto;
+  width: 100%;
+}
+
+.small { /*Small Email Text*/
+  font-size: 0.9rem;
+  margin-left: 2%;
+}
+
+.tall { /*Taller Email Text*/
+  font-size: 1.5rem;
+  margin-left: 2.5%;
+}
+
+.message-field textarea { /*Enter Message...*/
+  border: 3px solid #a2a2a2;
+  border-radius: 10px;
+  text-align: left;
+  color: #6b6b5b;
+  width: 80%;
+  height: 80px;
+  margin-left: 2%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.7rem;
+}
+
+.send-email { /*Send Email Button*/
+  margin-left: 2%;
+  margin-top: 2%;
+  background-color: #ffb120;
+  border-radius: 0.5rem;
+  border: none;
+  color: #f2f2f2;
+  padding: 1%;
+  text-align: center;
+  font-size: 1rem;
+  transition-duration: 0.4s;
+  transform: translate(3%);
+}
+
+.send-email:hover { /*Compose Button Hover Function*/
+  background-color: #f2f2f2;
+  color: #6b6b5b;
+  border: 2px solid #a2a2a2;
+}
+
+/*Mobile*/
+@media screen and (max-width: 600px) {
+  #main {
+    flex-direction: column;
+  }
+  
+  nav { 
+    width: 100%;
+    overflow: visible;
+  }
+
+  img {
+    margin-top: 5%;
+  }
+
+  nav p { 
+  font-size: 1.4rem;
+  }
+
+  .compose { 
+    padding: 3%;
+    font-size: 1.5rem; 
+  }
+
+  .nav-tabs a {
+    font-size: 1.5rem;
+    padding: 5px;
+  }
+
+  .previewer { 
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #c1c0c0;
+    overflow: visible;
+  }
+
+  input { 
+  text-align: left;
+  font-size: 1.7rem;
+  } 
+
+  .previewer span {
+    font-size: 1.2rem;
+  } 
+
+  #sawaharu {
+    background-color: #f2f2f2;
+  }
+
+  .email {
+    padding: 2%;
+    margin-top: 1%;
+    margin-bottom: 3%;
+  }
+
+  .reader {
+    overflow: visible;
+  }
+
+  .small { 
+    font-size: 1.2rem;
+    margin-left: 2%;
+  }
+
+  .tall { 
+    font-size: 2rem;
+    margin-left: 2.5%;
+  }
+
+  .message-field textarea { 
+    border: 3px solid #a2a2a2;
+    text-align: left;
+    text-align: start;
+    height: 50px;
+  }
+
+  .send-email { 
+    padding: 3%;
+    font-size: 1.4rem;
+  }
+}

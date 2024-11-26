@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>CSS Project</title>
+</head>
+<body>
+  <div id="main">   
+    <!--Navigation Bar-->
+    <nav>   
+      <img src="assets/profile-pic.png" width="9" height="9">
+      <p>Welcome, Joryu!</p>    
+
+      <button class="compose">Compose</button>
+      
+      <div class="nav-tabs">
+        <a href=""><span>Inbox (3)</span></a>
+        <br>
+        <a href=""><span>Tagged</span></a>
+        <br>
+        <a href=""><span>Important</span></a>
+        <br>
+        <a href=""><span>Sent Mail</span></a>
+        <br>
+        <a href=""><span>Drafts</span></a>
+        <br>
+        <a href=""><span>Trash</span></a>
+      </div>
+    </nav>
+    
+    <!-- Email Previewer -->
+    <div class="previewer">
+      <label for="search"> 
+        <input type="text" placeholder="Search for Emails">
+      </label>
+    
+      <div class =”email-list”>        
+        <div class="email">
+          <a href="" style="display: flex; justify-content:space-evenly;">
+            <span class="sender">Smile Burger</span>
+            <span class="time" style="display: flex; justify-content: right;">12:00PM</span>
+          </a>
+          <span class="peek">Joryu, we have new burgers...</span>
+          <br>
+        </div>
+
+        <div class="email" id="sawaharu">
+          <a href="" style="display: flex; justify-content:space-between;">
+            <span class="sender">Chatter</span>
+            <span class="time" style="display: flex; justify-content: right;">11:00AM</span>
+          </a>
+          <span class="peek">SawaHaru sent you a message...</span>
+          <br>
+        </div> 
+      
+        <div class="email">
+          <a href="" style="display: flex; justify-content: space-between;">
+            <span class="sender">Dolce Kamiya</span>
+            <span class="time" style="display: flex; justify-content: right;">Yesterday</span>
+          </a>
+          <span class="peek">This week's story winner is...</span>
+          <br>
+        </div>
+
+      </div> 
+    </div>
+
+    <!--Email Reader-->
+    <div class="reader">
+      <div class="full-text">
+        <p class="small">To: joryujozuma@daidoji.net</p>
+        <p class="small">From: nishida@majimaconstruction.com</p>
+        <p class="tall">Looking for the Boss</p>
+        <p class="small">Joryu-san, do you know where our boss is? We lost sight of him west of Shichifuku Street. We've checked nearby parks, but we can't find him at all.</p>
+        <p class="small">I also have a message from the Boss. He says it's a riddle for you. I seriously don't understand him.</p>
+        <p class="small">"Let's roll together."</p>
+        <br>
+        <p class="small">Kind regards,</p>
+        <p class="small">Nishida</p>
+      </div>
+
+      <div class="message-field">
+        <textarea name="reply-email" placeholder="Enter Message..."></textarea>
+        <br>
+        <button class="send-email">Send Email</button>
+      </div>
+    </div>
+  </div> 
+</body>
+</html>
